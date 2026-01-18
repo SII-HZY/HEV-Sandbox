@@ -1,0 +1,42 @@
+# Medical Domain Corpus Sample
+# This file contains sample medical conversation contexts
+
+A patient visits the clinic complaining of persistent headaches and dizziness over the past two weeks.
+
+The doctor discusses treatment options for a newly diagnosed case of Type 2 diabetes, including lifestyle changes and medication.
+
+A pharmacist provides counseling on proper medication dosage and potential side effects to a patient picking up a new prescription.
+
+During a telehealth consultation, a patient inquires about vaccine safety and efficacy for their elderly parent.
+
+A medical student asks their supervisor about the ethical considerations in disclosing a terminal diagnosis to a patient.
+
+The healthcare team discusses pain management strategies for a patient recovering from major surgery.
+
+A patient with a chronic condition seeks advice on managing symptoms during travel abroad.
+
+The emergency room physician evaluates a patient presenting with chest pain and shortness of breath.
+
+A nutritionist provides dietary recommendations to a patient with cardiovascular disease risk factors.
+
+During rounds, the attending physician discusses differential diagnoses with residents for a complex case.
+
+A patient inquires about alternative medicine approaches to complement their conventional cancer treatment.
+
+The nurse explains wound care procedures and signs of infection to a patient being discharged.
+
+A mental health professional discusses medication options and therapy approaches with a patient experiencing depression.
+
+The pediatrician addresses parental concerns about developmental milestones in a toddler.
+
+A patient with multiple comorbidities seeks guidance on coordinating care among different specialists.
+
+The pharmacist identifies a potential drug interaction in a patient's medication regimen.
+
+A healthcare provider discusses advance directives and end-of-life care preferences with an elderly patient.
+
+The physical therapist designs a rehabilitation plan for a patient recovering from a sports injury.
+
+A patient asks about genetic testing implications for hereditary disease risk in their family.
+
+The medical ethics committee reviews a case involving patient autonomy and treatment refusal.

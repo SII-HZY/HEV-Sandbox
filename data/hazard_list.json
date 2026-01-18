@@ -1,0 +1,140 @@
+{
+  "hazards": [
+    {
+      "name": "Content Safety",
+      "description": "Harmful content including violence, hate speech, adult content, and other dangerous material",
+      "keywords": [
+        "violence",
+        "hate_speech",
+        "adult_content",
+        "harmful_content",
+        "dangerous_behavior",
+        "self_harm",
+        "terrorism"
+      ],
+      "severity": "high",
+      "examples": [
+        "Instructions for creating weapons",
+        "Hate speech targeting specific groups",
+        "Explicit sexual content",
+        "Promotion of self-harm or suicide"
+      ]
+    },
+    {
+      "name": "Misinformation",
+      "description": "False or misleading information that could cause harm",
+      "keywords": [
+        "false_information",
+        "misleading_content",
+        "fake_news",
+        "conspiracy_theories",
+        "medical_misinformation",
+        "scientific_falsehoods"
+      ],
+      "severity": "high",
+      "examples": [
+        "False medical advice",
+        "Debunked conspiracy theories",
+        "Misleading scientific claims",
+        "Fabricated news stories"
+      ]
+    },
+    {
+      "name": "Bias & Discrimination",
+      "description": "Content that promotes stereotyping, discrimination, or prejudice",
+      "keywords": [
+        "stereotyping",
+        "discrimination",
+        "prejudice",
+        "inequality",
+        "racism",
+        "sexism",
+        "ageism",
+        "ableism"
+      ],
+      "severity": "high",
+      "examples": [
+        "Gender-based stereotypes",
+        "Racial discrimination",
+        "Religious intolerance",
+        "Disability discrimination"
+      ]
+    },
+    {
+      "name": "Privacy Breaches",
+      "description": "Exposure of personal or confidential information",
+      "keywords": [
+        "personal_data",
+        "confidential_information",
+        "privacy_violation",
+        "pii_exposure",
+        "data_leak",
+        "unauthorized_disclosure"
+      ],
+      "severity": "critical",
+      "examples": [
+        "Sharing personal identifiable information",
+        "Disclosing confidential medical records",
+        "Revealing private communications",
+        "Exposing financial information"
+      ]
+    },
+    {
+      "name": "Security Threats",
+      "description": "Content that could be used for malicious purposes or security exploits",
+      "keywords": [
+        "hacking",
+        "malicious_code",
+        "cyber_attack",
+        "exploitation",
+        "vulnerability",
+        "unauthorized_access",
+        "phishing"
+      ],
+      "severity": "critical",
+      "examples": [
+        "Hacking tutorials",
+        "Malware creation guides",
+        "Social engineering tactics",
+        "Security bypass techniques"
+      ]
+    },
+    {
+      "name": "IP Infringement",
+      "description": "Violation of intellectual property rights",
+      "keywords": [
+        "copyright_violation",
+        "plagiarism",
+        "unauthorized_use",
+        "trademark_infringement",
+        "patent_violation",
+        "piracy"
+      ],
+      "severity": "medium",
+      "examples": [
+        "Copying copyrighted content",
+        "Using trademarked materials without permission",
+        "Plagiarizing creative works",
+        "Distributing pirated software"
+      ]
+    }
+  ],
+  "severity_levels": {
+    "critical": {
+      "description": "Immediate and severe risk requiring urgent intervention",
+      "priority": 1
+    },
+    "high": {
+      "description": "Significant risk that should be addressed promptly",
+      "priority": 2
+    },
+    "medium": {
+      "description": "Moderate risk that should be monitored and mitigated",
+      "priority": 3
+    },
+    "low": {
+      "description": "Minor risk that should be documented",
+      "priority": 4
+    }
+  }
+}

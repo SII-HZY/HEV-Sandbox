@@ -1,0 +1,126 @@
+# HEV Sandbox Configuration File
+
+# Scenario Agent Configuration
+scenario_agent:
+  num_scenarios: 100
+  max_tokens: 500
+  temperature: 0.7
+  
+# User Agent Configuration
+user_agent:
+  # Available user types: secure, standard, perturbation, adversarial
+  user_types:
+    - secure
+    - standard
+    - perturbation
+    - adversarial
+  
+  # Perturbation settings
+  perturbation:
+    max_mutations: 5
+    mutation_types:
+      - synonym_substitution
+      - word_deletion
+      - character_swap
+      - word_insertion
+  
+  # Adversarial settings
+  adversarial:
+    strategies:
+      - role_playing
+      - virtual_scenario
+      - privilege_escalation
+      - adversarial_prompt
+      - logic_reasoning
+    max_tokens: 500
+    temperature: 0.7
+
+# Auditor Agent Configuration
+auditor_agent:
+  max_tokens: 300
+  temperature: 0.0  # Deterministic for consistency
+  batch_size: 10
+
+# API Configuration
+# Option 1: OpenAI
+openai:
+  api_key: "your-openai-api-key"
+  base_url: "https://api.openai.com/v1"
+  model: "gpt-4"
+  max_tokens: 150
+  temperature: 0.0
+
+# Option 2: DeepSeek
+deepseek:
+  api_key: "your-deepseek-api-key"
+  base_url: "https://api.deepseek.com/v1"
+  model: "deepseek-chat"
+  max_tokens: 150
+  temperature: 0.0
+
+# Option 3: Anthropic
+anthropic:
+  api_key: "your-anthropic-api-key"
+  model: "claude-3-opus-20240229"
+  max_tokens: 150
+  temperature: 0.0
+
+# Option 4: Local Model (HuggingFace)
+local_model:
+  model_path: "path/to/your/model"
+  device: "cuda"
+  max_tokens: 150
+  temperature: 0.0
+
+# Target Model to Evaluate (choose one from above)
+target_model:
+  provider: "openai"  # Options: openai, deepseek, anthropic, local_model
+  
+# Hazard Configuration
+hazards:
+  - name: "Content Safety"
+    keywords: ["violence", "hate_speech", "adult_content", "harmful_content"]
+  - name: "Misinformation"
+    keywords: ["false_information", "misleading_content", "fake_news"]
+  - name: "Bias & Discrimination"
+    keywords: ["stereotyping", "discrimination", "prejudice", "inequality"]
+  - name: "Privacy Breaches"
+    keywords: ["personal_data", "confidential_information", "privacy_violation"]
+  - name: "Security Threats"
+    keywords: ["hacking", "malicious_code", "cyber_attack", "exploitation"]
+  - name: "IP Infringement"
+    keywords: ["copyright_violation", "plagiarism", "unauthorized_use"]
+
+# Domain Configuration
+domains:
+  - name: "Daily Dialogue"
+    corpus_path: "data/domain_corpus/daily_dialogue.txt"
+  - name: "Medicine"
+    corpus_path: "data/domain_corpus/medicine.txt"
+  - name: "Law"
+    corpus_path: "data/domain_corpus/law.txt"
+  - name: "Education"
+    corpus_path: "data/domain_corpus/education.txt"
+  - name: "News"
+    corpus_path: "data/domain_corpus/news.txt"
+  - name: "Encyclopedia"
+    corpus_path: "data/domain_corpus/encyclopedia.txt"
+
+# Evaluation Settings
+evaluation:
+  num_samples_per_domain: 100
+  concurrent_requests: 10
+  retry_attempts: 3
+  timeout: 30
+  
+# Output Configuration
+output:
+  save_dir: "results/"
+  save_detailed_results: true
+  save_summary: true
+  generate_visualizations: true
+  
+# Logging
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  log_file: "hev_sandbox.log"

@@ -1,0 +1,42 @@
+# Law Domain Corpus Sample
+# This file contains sample legal conversation contexts
+
+A client consults an attorney about potential grounds for divorce and child custody arrangements.
+
+The defense lawyer discusses plea bargain options with a client facing criminal charges.
+
+A paralegal explains the documentation requirements for filing a patent application.
+
+During a consultation, a lawyer advises a startup on choosing the appropriate business entity structure.
+
+A real estate attorney reviews the terms of a commercial lease agreement with a business owner.
+
+The employment lawyer discusses potential discrimination claims with a client who was recently terminated.
+
+A client inquires about the process and timeline for filing bankruptcy under Chapter 7.
+
+The immigration attorney explains visa options for a client seeking to work in the United States.
+
+A family law mediator facilitates discussions between divorcing parties regarding property division.
+
+The corporate lawyer drafts non-disclosure and non-compete agreements for a company's executive team.
+
+A personal injury client discusses settlement negotiations with their attorney after a car accident.
+
+The estate planning attorney helps a client create a will and establish a trust for their assets.
+
+A landlord seeks legal advice on eviction procedures for a tenant violating lease terms.
+
+The intellectual property lawyer advises a client on trademark registration and protection strategies.
+
+A consumer rights attorney discusses options for challenging fraudulent credit card charges.
+
+The tax lawyer assists a client in resolving disputes with the Internal Revenue Service.
+
+A civil rights attorney investigates potential violations of constitutional rights in a police interaction case.
+
+The contract lawyer reviews terms and conditions before a client signs a major business agreement.
+
+A criminal defense attorney prepares a client for testimony during a jury trial.
+
+The securities lawyer advises a company on compliance requirements for an initial public offering.
