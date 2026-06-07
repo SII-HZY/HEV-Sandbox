@@ -1,29 +1,13 @@
-# Core dependencies
+# Core dependencies for fixed-dataset evaluation
 openai>=1.0.0
 anthropic>=0.8.0
 requests>=2.31.0
 tqdm>=4.66.0
 numpy>=1.24.0
 pandas>=2.0.0
-
-# NLP dependencies
-spacy>=3.7.0
-transformers>=4.35.0
-torch>=2.0.0
-
-# Data processing
-datasets>=2.14.0
-jsonlines>=4.0.0
 pyyaml>=6.0
-
-# Visualization
-matplotlib>=3.7.0
-seaborn>=0.12.0
+jsonlines>=4.0.0
 
 # Testing
 pytest>=7.4.0
 pytest-cov>=4.1.0
-
-# Optional: for local model inference
-accelerate>=0.24.0
-bitsandbytes>=0.41.0

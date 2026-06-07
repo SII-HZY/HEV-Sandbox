@@ -14,9 +14,26 @@ import random
 import re
 from typing import List, Dict, Optional
 import logging
-import spacy
+
+spacy = None  # loaded lazily only when perturbation mode needs it
 
 logger = logging.getLogger(__name__)
+
+
+def _load_spacy_model():
+    global spacy
+    try:
+        if spacy is None:
+            import spacy as _spacy
+            spacy = _spacy
+        return spacy.load("en_core_web_sm")
+    except ImportError:
+        logger.warning("spaCy is not installed; perturbation user will use simple text mutations only")
+        return None
+    except OSError:
+        logger.warning("spaCy model not found. Install with: python -m spacy download en_core_web_sm")
+        return None
+
 
 
 class UserAgent:
@@ -47,13 +64,9 @@ class UserAgent:
         self.llm_client = llm_client
         self.config = config or {}
         
-        # Load spacy for perturbation
+        # spaCy is optional and can be memory-heavy; use only when explicitly enabled.
         if user_type == "perturbation":
-            try:
-                self.nlp = spacy.load("en_core_web_sm")
-            except OSError:
-                logger.warning("Spacy model not found. Install with: python -m spacy download en_core_web_sm")
-                self.nlp = None
+            self.nlp = _load_spacy_model() if self.config.get("use_spacy", False) else None
         
         logger.info(f"UserAgent initialized with type: {user_type}")
     
@@ -67,7 +80,8 @@ class UserAgent:
         Returns:
             Generated prompt string
         """
-        test_question = scenario.get("test_question", "")
+        # Normalized released data uses `question`; older online scenarios use `test_question`.
+        test_question = scenario.get("prompt") or scenario.get("question") or scenario.get("test_question") or scenario.get("Test question") or ""
         
         if self.user_type == "secure":
             return self._generate_secure_prompt(test_question)
@@ -228,14 +242,21 @@ class UserAgent:
     def _generate_adversarial_prompt(self, question: str, scenario: Dict) -> str:
         """
         Generate adversarial jailbreak-style prompts.
-        
-        Strategies:
-        1. Role Playing
-        2. Virtual Scenario Construction
-        3. Privilege Escalation
-        4. Adversarial Prompt Obfuscation
-        5. Logic Reasoning Framing
+
+        If a normalized benchmark record already contains pre-generated
+        ``jailbreak_prompts``, reuse it for reproducible evaluation. Otherwise,
+        fall back to online/template adversarial prompt generation.
         """
+        precomputed = scenario.get("jailbreak_prompts") or []
+        if precomputed:
+            strategy_filter = (self.config.get("adversarial") or {}).get("strategy")
+            candidates = [p for p in precomputed if not strategy_filter or p.get("strategy") == strategy_filter]
+            candidates = candidates or precomputed
+            selected = random.choice(candidates)
+            if isinstance(selected, dict):
+                return selected.get("prompt") or question
+            return str(selected)
+
         strategy = random.choice([
             "role_playing",
             "virtual_scenario",
@@ -243,7 +264,7 @@ class UserAgent:
             "adversarial_prompt",
             "logic_reasoning"
         ])
-        
+
         if self.llm_client:
             return self._generate_llm_adversarial(question, strategy)
         else:
@@ -337,11 +358,7 @@ class LinguisticMutator:
     """
     
     def __init__(self):
-        try:
-            self.nlp = spacy.load("en_core_web_sm")
-        except OSError:
-            logger.warning("Spacy model not available")
-            self.nlp = None
+        self.nlp = _load_spacy_model()
     
     def generate_mutations(self, text: str, max_depth: int = 3) -> List[str]:
         """

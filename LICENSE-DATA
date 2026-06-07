@@ -1,0 +1,22 @@
+HEV-Sandbox Benchmark Data License Notice
+
+The software code in this repository is licensed separately under the MIT License.
+
+The normalized benchmark files under data/benchmark/ remove raw original_conversation
+contexts and retain only source_context_hash values. The benchmark questions,
+option-level safety annotations, adversarial prompts, and perturbation metadata
+are intended for research, evaluation, and safety-improvement use.
+
+Before public redistribution, the maintainers should verify that the chosen data
+license is compatible with all upstream source corpora, institutional policy, and
+any API/provider terms involved in data generation. If compatibility is confirmed,
+replace this notice with the final data license, such as CC BY 4.0, CC BY-NC 4.0,
+or another license selected by the maintainers.
+
+Restrictions requested by the maintainers:
+- Do not use the adversarial prompts to bypass safeguards in deployed systems.
+- Do not attempt to reconstruct, re-identify, or redistribute raw source contexts.
+- Do not use the dataset for harmful, illegal, or privacy-invasive activity.
+- Cite the HEV-Sandbox paper and this repository when using the dataset.
+
+The data are provided "as is", without warranty of any kind.

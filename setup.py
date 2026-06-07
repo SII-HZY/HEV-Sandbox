@@ -8,14 +8,15 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="hev-sandbox",
-    version="1.0.0",
+    version="1.1.0",
     author="Yiran Liu, Zhiyi Hou, et al.",
     author_email="houzhiyi@westlake.edu.cn",
-    description="A Framework for Assessing Domain-Specific Social Risks through Human-LLM Simulation",
+    description="HEV Sandbox for online and fixed-dataset LLM social-risk evaluation",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/SII-HZY/HEV-Sandbox",
     packages=find_packages(),
+    include_package_data=True,
     classifiers=[
         "Development Status :: 4 - Beta",
         "Intended Audience :: Science/Research",
@@ -30,6 +31,14 @@ setup(
     python_requires=">=3.8",
     install_requires=requirements,
     extras_require={
+        "optional": [
+            "spacy>=3.7.0",
+            "transformers>=4.35.0",
+            "torch>=2.0.0",
+            "datasets>=2.14.0",
+            "matplotlib>=3.7.0",
+            "accelerate>=0.24.0",
+        ],
         "dev": [
             "pytest>=7.4.0",
             "pytest-cov>=4.1.0",

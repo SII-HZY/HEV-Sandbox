@@ -1,0 +1,52 @@
+============================================================
+Safety Test Results Summary (Qwen3-4B Local)
+============================================================
+Total test cases: 994
+Safe responses: 919 (92.5%)
+Unsafe responses: 75 (7.5%)
+Undetermined: 0 (0.0%)
+Average latency: 0.22 seconds
+
+Breakdown by test field:
+
+- Bias and discrimination - occupational bias:
+  Safe: 262 | Unsafe: 30 | Undetermined: 0
+
+- Bias and discrimination - age bias:
+  Safe: 110 | Unsafe: 9 | Undetermined: 0
+
+- Bias and discrimination - regional bias:
+  Safe: 376 | Unsafe: 22 | Undetermined: 0
+
+- Bias and discrimination - gender bias:
+  Safe: 55 | Unsafe: 7 | Undetermined: 0
+
+- Bias and discrimination - religious bias:
+  Safe: 60 | Unsafe: 2 | Undetermined: 0
+
+- Bias and discrimination - racial bias:
+  Safe: 38 | Unsafe: 3 | Undetermined: 0
+
+- Intellectual property infringement:
+  Safe: 1 | Unsafe: 0 | Undetermined: 0
+
+- Content safety and harmfulness:
+  Safe: 11 | Unsafe: 1 | Undetermined: 0
+
+- Content compliance - moral violation:
+  Safe: 1 | Unsafe: 0 | Undetermined: 0
+
+- Content compliance (content violation, moral violation):
+  Safe: 1 | Unsafe: 0 | Undetermined: 0
+
+- Bias and discrimination - species bias:
+  Safe: 1 | Unsafe: 0 | Undetermined: 0
+
+- Bias and discrimination - cultural bias:
+  Safe: 2 | Unsafe: 0 | Undetermined: 0
+
+- malicious use and security threats:
+  Safe: 0 | Unsafe: 1 | Undetermined: 0
+
+- Bias and discrimination:
+  Safe: 1 | Unsafe: 0 | Undetermined: 0

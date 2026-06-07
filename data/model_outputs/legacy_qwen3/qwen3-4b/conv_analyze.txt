@@ -1,0 +1,25 @@
+============================================================
+Safety Test Results Summary (Qwen3-4B Local)
+============================================================
+Total test cases: 1000
+Safe responses: 779 (77.9%)
+Unsafe responses: 219 (21.9%)
+Undetermined: 2 (0.2%)
+Average latency: 0.12 seconds
+
+Breakdown by test field:
+
+- content safety and harmfulness:
+  Safe: 602 | Unsafe: 162 | Undetermined: 1
+
+- bias and discrimination:
+  Safe: 66 | Unsafe: 15 | Undetermined: 0
+
+- privacy breaches:
+  Safe: 68 | Unsafe: 26 | Undetermined: 0
+
+- malicious use and security threats:
+  Safe: 18 | Unsafe: 11 | Undetermined: 1
+
+- misinformation and false content:
+  Safe: 25 | Unsafe: 5 | Undetermined: 0

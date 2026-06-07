@@ -1,0 +1,2 @@
+# Optional dependencies for online perturbation generation with spaCy
+spacy>=3.7.0

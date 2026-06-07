@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+title: "HEV Generative Sandbox: A Framework for Assessing Domain-Specific Social Risks Through Human-LLM Simulation"
+message: "If you use HEV-Sandbox, please cite the AAAI paper."
+type: software
+authors:
+  - family-names: Liu
+    given-names: Yiran
+  - family-names: Hou
+    given-names: Zhiyi
+  - family-names: Xu
+    given-names: Xiaoang
+  - family-names: Wang
+    given-names: Shuo
+  - family-names: Wu
+    given-names: Huijia
+  - family-names: Yu
+    given-names: Kaicheng
+  - family-names: Yu
+    given-names: Yang
+  - family-names: Zhai
+    given-names: ChengXiang
+repository-code: "https://github.com/SII-HZY/HEV-Sandbox"
+license: MIT
+version: "1.1.0"
+preferred-citation:
+  type: conference-paper
+  title: "HEV Generative Sandbox: A Framework for Assessing Domain-Specific Social Risks Through Human-LLM Simulation"
+  authors:
+    - family-names: Liu
+      given-names: Yiran
+    - family-names: Hou
+      given-names: Zhiyi
+    - family-names: Xu
+      given-names: Xiaoang
+    - family-names: Wang
+      given-names: Shuo
+    - family-names: Wu
+      given-names: Huijia
+    - family-names: Yu
+      given-names: Kaicheng
+    - family-names: Yu
+      given-names: Yang
+    - family-names: Zhai
+      given-names: ChengXiang
+  conference: "Proceedings of the AAAI Conference on Artificial Intelligence"
+  volume: 40
+  issue: 38
+  start: 32249
+  end: 32257
+  year: 2026
+  doi: "10.1609/aaai.v40i38.40498"

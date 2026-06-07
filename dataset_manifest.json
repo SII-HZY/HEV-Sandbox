@@ -1,0 +1,125 @@
+{
+  "augmentation_strategy_counts": {
+    "conv:charswap": 1000,
+    "conv:deletion": 1000,
+    "conv:eda": 999,
+    "conv:wordnet": 1000,
+    "edu:charswap": 1000,
+    "edu:deletion": 1000,
+    "edu:eda": 1000,
+    "edu:wordnet": 1000,
+    "law:charswap": 967,
+    "law:deletion": 967,
+    "law:eda": 967,
+    "law:unknown": 1,
+    "law:wordnet": 967,
+    "medical:charswap": 1000,
+    "medical:deletion": 1000,
+    "medical:eda": 1000,
+    "medical:wordnet": 1000,
+    "news:charswap": 999,
+    "news:deletion": 999,
+    "news:eda": 999,
+    "news:wordnet": 999,
+    "wiki:charswap": 994,
+    "wiki:deletion": 994,
+    "wiki:eda": 994,
+    "wiki:wordnet": 994
+  },
+  "dataset_name": "HEV-Sandbox Benchmark",
+  "description": "Normalized benchmark files. Raw original_conversation fields are not included; only source_context_hash is retained.",
+  "domains": {
+    "conv": {
+      "name": "Daily Dialogue"
+    },
+    "edu": {
+      "name": "Education"
+    },
+    "law": {
+      "name": "Law"
+    },
+    "medical": {
+      "name": "Medicine"
+    },
+    "news": {
+      "name": "News"
+    },
+    "wiki": {
+      "name": "Encyclopedic Knowledge"
+    }
+  },
+  "model_outputs": {
+    "legacy_qwen3": {
+      "qwen3-14b": {
+        "conv": 1000,
+        "edu": 1000,
+        "law": 967,
+        "medical": 1000,
+        "news": 999,
+        "total": 5960,
+        "wiki": 994
+      },
+      "qwen3-32b": {
+        "conv": 1000,
+        "edu": 1000,
+        "law": 967,
+        "medical": 1000,
+        "news": 999,
+        "total": 5960,
+        "wiki": 994
+      },
+      "qwen3-4b": {
+        "conv": 1000,
+        "edu": 1000,
+        "law": 967,
+        "medical": 1000,
+        "news": 999,
+        "total": 5960,
+        "wiki": 994
+      }
+    },
+    "note": "Reference outputs normalized from results.zip; not the full paper result set."
+  },
+  "schema_version": "1.0",
+  "splits": {
+    "adversarial": {
+      "conv": 1000,
+      "edu": 1000,
+      "law": 967,
+      "medical": 1000,
+      "news": 999,
+      "wiki": 994
+    },
+    "base": {
+      "conv": 1000,
+      "edu": 1000,
+      "law": 967,
+      "medical": 1000,
+      "news": 999,
+      "wiki": 994
+    },
+    "perturbation": {
+      "conv": 3999,
+      "edu": 4000,
+      "law": 3869,
+      "medical": 4000,
+      "news": 3996,
+      "wiki": 3976
+    }
+  },
+  "total_examples": {
+    "adversarial": 5960,
+    "base": 5960,
+    "perturbation": 23840
+  },
+  "total_prompts": {
+    "adversarial": 29800
+  },
+  "version": "1.1.0",
+  "warnings": [
+    {
+      "count": 1,
+      "type": "missing_augmentation_info"
+    }
+  ]
+}

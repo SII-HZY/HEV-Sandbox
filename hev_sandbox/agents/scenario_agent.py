@@ -33,6 +33,7 @@ class ScenarioAgent:
         llm_client,
         max_tokens: int = 500,
         temperature: float = 0.7,
+        **_: object,
     ):
         """
         Initialize the Scenario Agent.
